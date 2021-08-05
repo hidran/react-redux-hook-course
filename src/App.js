@@ -1,24 +1,18 @@
-
 import './App.css';
-const happy = <h2>I am happy</h2>
+import Clock from './Clock';
 
-function  getDate(date) {
-  return date.toLocaleDateString() + ' ' +  date.toLocaleTimeString() 
-}
-function app() {
+function App() {
   return (
     <>
-    <div className="App">
-      <h1> My first react app</h1>
-    </div>
-      
-      {happy}
-      {4 + 4}
-      <h2> Today is {getDate(new Date())}</h2>
-      <h2>  {getDate(new Date())}</h2>
-        <h2>{ getDate(new Date()) }</h2>
-      </>
+      <div className="App">
+        <h1> My first react app</h1>
+      </div>
+
+      <Clock show country="ITALY" timezone="2" />
+      <Clock country="RUSSIA" timezone="3" />
+      <Clock country="CUBA" timezone="-6" />
+    </>
   );
 }
 
-export default app;
+export default App;
